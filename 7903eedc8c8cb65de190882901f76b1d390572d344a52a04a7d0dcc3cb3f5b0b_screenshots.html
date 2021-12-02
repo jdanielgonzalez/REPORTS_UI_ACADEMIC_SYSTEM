@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="fade75a15154fc41887a1ecf40374df181dd7205f40fa6d93d2fc823b6b203d5.html">HU07</a></span>
+                > <span class="truncate-60"><a
+                    href="7903eedc8c8cb65de190882901f76b1d390572d344a52a04a7d0dcc3cb3f5b0b.html">Crear un training en sofkau </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="fa fa-comments-o"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 02-12-2021 00:54</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">HU07 </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Yo como: Coach<br />
+Quiero: crear trainings a partir de programas<br />
+Para: poder asignar aprendices y coaches.
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Crear un training en sofkau
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="57b4a92d47c7baacb0cf0117be841390bb222d4a20ef4bb070d3425a99aa346f.png" title=" Given que el coach se encuentra logueado" width="1920"/>
+                <img src="57b4a92d47c7baacb0cf0117be841390bb222d4a20ef4bb070d3425a99aa346f.png" title=" Coach open landing page" width="1920"/>
+                <img src="57b4a92d47c7baacb0cf0117be841390bb222d4a20ef4bb070d3425a99aa346f.png" title=" Coach opens the Landing page" width="1920"/>
+                <img src="d7c56d43b18992f00d3471577cf62daf2fa5fd213b9805adae49f5d848008804.png" title=" Coach opens the Landing page (completed)" width="1920"/>
+                <img src="d7c56d43b18992f00d3471577cf62daf2fa5fd213b9805adae49f5d848008804.png" title=" Coach open landing page (completed)" width="1920"/>
+                <img src="d7c56d43b18992f00d3471577cf62daf2fa5fd213b9805adae49f5d848008804.png" title=" Coach login with google" width="1920"/>
+                <img src="d7c56d43b18992f00d3471577cf62daf2fa5fd213b9805adae49f5d848008804.png" title=" Coach clicks on loginButton" width="1920"/>
+                <img src="1be33df125531f993fafebdf73f1e438f22e82c84b246d8c4da7616a57bae094.png" title=" Coach clicks on loginButton (completed)" width="1920"/>
+                <img src="1be33df125531f993fafebdf73f1e438f22e82c84b246d8c4da7616a57bae094.png" title=" Coach login with google (completed)" width="1920"/>
+                <img src="89636b54d8e3a3447a150eadc7e4698d3d87e5c8786c143e9cb1d88fa7af1634.png" title=" Coach fill google login form task" width="762"/>
+                <img src="4e0d64dabce220bafb6cf8afad0b0e3a77512cfa5fbed797a14d4e7649cd8ba6.png" title=" Coach clicks on emailGoogle" width="762"/>
+                <img src="0aaeeab3b483c13bf024bdfa618163f967dd187af56d70e42fd11b2a347bfcc3.png" title=" Coach clicks on emailGoogle (completed)" width="762"/>
+                <img src="0aaeeab3b483c13bf024bdfa618163f967dd187af56d70e42fd11b2a347bfcc3.png" title=" Coach enters 'jdaniel.g.puerta@gmail.com' into emailGoogle" width="762"/>
+                <img src="c0c2382df0cf167aaf3c0dc1660f62de6900d7537b032bbe7662049cee840ce4.png" title=" Coach enters 'jdaniel.g.puerta@gmail.com' into emailGoogle (completed)" width="762"/>
+                <img src="c0c2382df0cf167aaf3c0dc1660f62de6900d7537b032bbe7662049cee840ce4.png" title=" Coach clicks on nextButton" width="762"/>
+                <img src="665b1288a5c67ecda49dff3f41c9652a54d1e383c520f740e9d87a85277b5a2e.png" title=" Coach clicks on nextButton (completed)" width="762"/>
+                <img src="b4ecacb0b696d88e205b42e43bc5512f1ea09441d39dcc92e0506ac7b97d0e99.png" title=" Coach clicks on password" width="762"/>
+                <img src="2c0d394f94c4f5b8eb276ba99dfac225c753f89ab9037c27088a9a8f3f28c3cf.png" title=" Coach clicks on password (completed)" width="762"/>
+                <img src="2c0d394f94c4f5b8eb276ba99dfac225c753f89ab9037c27088a9a8f3f28c3cf.png" title=" Coach enters 'AdminQA*' into password" width="762"/>
+                <img src="341bde46b90d2d13ac7dd00ecaba653a062131880a9a4066af8d36b6e323d90a.png" title=" Coach enters 'AdminQA*' into password (completed)" width="762"/>
+                <img src="341bde46b90d2d13ac7dd00ecaba653a062131880a9a4066af8d36b6e323d90a.png" title=" Coach clicks on nextPasswordButton" width="762"/>
+                <img src="9e7e35b4de8e01aa9b377e2a0027c26a8565cdc51cf875f9e4c33c91ac535e69.png" title=" Coach clicks on nextPasswordButton (completed)" width="762"/>
+                <img src="9e7e35b4de8e01aa9b377e2a0027c26a8565cdc51cf875f9e4c33c91ac535e69.png" title=" Coach fill google login form task (completed)" width="762"/>
+                <img src="9e7e35b4de8e01aa9b377e2a0027c26a8565cdc51cf875f9e4c33c91ac535e69.png" title=" Given que el coach se encuentra logueado (completed)" width="762"/>
+                <img src="1be33df125531f993fafebdf73f1e438f22e82c84b246d8c4da7616a57bae094.png" title=" When el coah quiere crear un nuevo training" width="1920"/>
+                <img src="1be33df125531f993fafebdf73f1e438f22e82c84b246d8c4da7616a57bae094.png" title=" Coach create training task" width="1920"/>
+                <img src="8d2aa1f3c71b0046b3bcef566cbb807e145e94a037078b42a81bb3e8ddfac514.png" title=" Coach clicks on training_active" width="1920"/>
+                <img src="4c1e3fd4f8ce0185c9f39f100329173c26ba780e7ca6b38d49a17bb652831d50.png" title=" Coach clicks on training_active (completed)" width="1920"/>
+                <img src="f1a91a80373e1720fd93ba8207f028aac1add6e10ef274d11741de1b842817b0.png" title=" Coach clicks on create_training" width="1920"/>
+                <img src="8a41df89f4f3f17a6a401758062045dc1da793d133d846373909fb875409ab52.png" title=" Coach clicks on create_training (completed)" width="1920"/>
+                <img src="c324011dfa075f5e990bab03bc95a3638ff2e80a841c7a9fea178e89fcb21bc1.png" title=" Coach clears field Nombre del training" width="1920"/>
+                <img src="a709037176a93275bd3841b5b52b525cc677c238da76f4829f9e95fbc78bbd39.png" title=" Coach clears field Nombre del training (completed)" width="1920"/>
+                <img src="a709037176a93275bd3841b5b52b525cc677c238da76f4829f9e95fbc78bbd39.png" title=" Coach enters 'DESARROLLO' into Nombre del training" width="1920"/>
+                <img src="478ad1c87adfc445dba373900463e82da95ce4bd6df1b0fac7ccf88314d6be52.png" title=" Coach enters 'DESARROLLO' into Nombre del training (completed)" width="1920"/>
+                <img src="478ad1c87adfc445dba373900463e82da95ce4bd6df1b0fac7ccf88314d6be52.png" title=" Coach selects 1 in Select Coaches" width="1920"/>
+                <img src="4ba2861d37f49941102db942d42282863280f82c896ac57b59a3a5cefa27b32b.png" title=" Coach selects 1 in Select Coaches (completed)" width="1920"/>
+                <img src="2941063573dee9bdfcf04db201e35e7703595780ec7bcfe19bb8d03d84bc0728.png" title=" Coach clears field Fecha de Inicio" width="1920"/>
+                <img src="0cd5ccc780cc5f452c24a92f3cc826a598a4d49f021af457e4a600cd44030af4.png" title=" Coach clears field Fecha de Inicio (completed)" width="1920"/>
+                <img src="0cd5ccc780cc5f452c24a92f3cc826a598a4d49f021af457e4a600cd44030af4.png" title=" Coach enters '12/03/2022' into Fecha de Inicio" width="1920"/>
+                <img src="0cd5ccc780cc5f452c24a92f3cc826a598a4d49f021af457e4a600cd44030af4.png" title=" Coach enters '12/03/2022' into Fecha de Inicio (completed)" width="1920"/>
+                <img src="9a57bd6951b489a6458e2cf4a5ddc8991ae7e40bc11a9f4ce400e5c9037747e9.png" title=" Coach clicks on Elegir un Programa" width="1920"/>
+                <img src="f7f444e56abb5bbd1acf5600ad13a51044b2507644c69bd25944b0f10edc6237.png" title=" Coach clicks on Elegir un Programa (completed)" width="1920"/>
+                <img src="1d7af17a8bd4d48b0dfa7b35dd8f87755459fc71bc3b3d7ad594800a483ae538.png" title=" Coach enters '' into create_training" width="1920"/>
+                <img src="1d7af17a8bd4d48b0dfa7b35dd8f87755459fc71bc3b3d7ad594800a483ae538.png" title=" Coach enters '' into create_training (completed)" width="1920"/>
+                <img src="f5d0a854b284db1d3bb9c3a94b212263c6f08b7b4559df12e840a980c5cd55db.png" title=" Coach clicks on Crear" width="1920"/>
+                <img src="ba13d35c24010439b6dea071083bbb1a0d028835013c6146298476a4a8eb974b.png" title=" Coach clicks on Crear (completed)" width="1920"/>
+                <img src="0fc414d3380e5321387b9f99152f1d6961a2869d959a4d11f04bea7165b6ef15.png" title=" Coach clicks on training_active" width="1920"/>
+                <img src="f1a91a80373e1720fd93ba8207f028aac1add6e10ef274d11741de1b842817b0.png" title=" Coach clicks on training_active (completed)" width="1920"/>
+                <img src="19947ac81313e64b03cb91ad4a86bc39dd8710008c4b37185ede9900ce90b7f2.png" title=" Coach create training task (completed)" width="1920"/>
+                <img src="19947ac81313e64b03cb91ad4a86bc39dd8710008c4b37185ede9900ce90b7f2.png" title=" When el coah quiere crear un nuevo training (completed)" width="1920"/>
+                <img src="19947ac81313e64b03cb91ad4a86bc39dd8710008c4b37185ede9900ce90b7f2.png" title=" Then el sistema deberia crear el training de manera correcta" width="1920"/>
+                <img src="19947ac81313e64b03cb91ad4a86bc39dd8710008c4b37185ede9900ce90b7f2.png" title=" Then create training step definition$$ lambda$633/0x0000000100548840 should be '7'" width="1920"/>
+                <img src="19947ac81313e64b03cb91ad4a86bc39dd8710008c4b37185ede9900ce90b7f2.png" title=" Then el sistema deberia crear el training de manera correcta (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>
