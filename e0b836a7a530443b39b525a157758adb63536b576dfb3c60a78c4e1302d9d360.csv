@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"HU01 - autenticacion","uno - Existencia de elemento de login en la loginPage","SUCCESS","2021-12-03T13:43:52.7079842-05:00[America/Bogota]","0.0","9.99"
+"HU01 - autenticacion","dos - Login exitoso coach","SUCCESS","2021-12-03T13:44:04.9720887-05:00[America/Bogota]","0.0","19.46"
+"HU01 - autenticacion","tres - login exitoso aprendiz","SUCCESS","2021-12-03T13:44:25.3721558-05:00[America/Bogota]","0.0","17.39"
+"HU01 - autenticacion","cuatro - Acceso a rutas sin tener sesion activa","SUCCESS","2021-12-03T13:44:43.6556632-05:00[America/Bogota]","0.0","5.74"

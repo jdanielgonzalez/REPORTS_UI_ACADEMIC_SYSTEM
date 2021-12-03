@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Historia de Usuario 06 CA003","Verificacion de correcta eliminacion de un programa","FAILURE","2021-12-03T13:51:57.9785746-05:00[America/Bogota]","0.0","21.63"
+"Historia de Usuario 06 CA003","Verificacion de correcta edicion de nombre de programa","FAILURE","2021-12-03T13:52:20.5357853-05:00[America/Bogota]","0.0","18.44"
+"Historia de Usuario 06 CA003","Verificacion de Error con falta de nombre de programa","FAILURE","2021-12-03T13:52:40.0440369-05:00[America/Bogota]","0.0","18.46"
+"Historia de Usuario 06 CA003","Correcta asignacion de cursos","FAILURE","2021-12-03T13:52:59.4179363-05:00[America/Bogota]","0.0","18.85"

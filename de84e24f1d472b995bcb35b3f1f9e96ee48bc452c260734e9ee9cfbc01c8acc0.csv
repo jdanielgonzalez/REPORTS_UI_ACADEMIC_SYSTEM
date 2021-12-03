@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Historia de Usuario 06 CA001","Verificar la creación del programa suministrando los datos obligatorios","FAILURE","2021-12-03T13:50:41.0927171-05:00[America/Bogota]","0.0","17.97"
+"Historia de Usuario 06 CA001","Verificar el fallo al momento de no suministrar ninguna información en los campos obligatorios","FAILURE","2021-12-03T13:50:59.9800506-05:00[America/Bogota]","0.0","18.25"
+"Historia de Usuario 06 CA001","Verificar el fallo al momento de no ingresar nombre del programa","FAILURE","2021-12-03T13:51:19.1726336-05:00[America/Bogota]","0.0","18.45"
+"Historia de Usuario 06 CA001","Verificar el fallo al momento de no ingresar ningún curso al programa","FAILURE","2021-12-03T13:51:38.5702902-05:00[America/Bogota]","0.0","18.36"

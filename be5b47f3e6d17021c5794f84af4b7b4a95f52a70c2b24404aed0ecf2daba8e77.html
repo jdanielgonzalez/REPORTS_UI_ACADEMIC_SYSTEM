@@ -148,7 +148,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Hu06","type":"feature","href":"be5b47f3e6d17021c5794f84af4b7b4a95f52a70c2b24404aed0ecf2daba8e77.html","nodes":[{"text":"Historia de Usuario 06 CA001","type":"feature","href":"7cdea769927ebdd89ca514bea1c1759db63069203fa11f5f71a08c15b2f4e96b.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027far fa-stop-circle pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e",""]},{"text":"Historia de Usuario 06 CA003","type":"feature","href":"afd1c4dd06a23c0ee9b6cba1b0ef8ac352f43f2b08f363a79d489e6de321cbf4.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027far fa-stop-circle pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e",""]},{"text":"Historia de Usuario 06 CA004","type":"feature","href":"fc1b2f649e18ceeacd359e10a5cda7458a69c02e704920fd66d1c5999ca067fa.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027far fa-stop-circle pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e",""]}],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e3 features\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Hu06","type":"feature","href":"be5b47f3e6d17021c5794f84af4b7b4a95f52a70c2b24404aed0ecf2daba8e77.html","nodes":[{"text":"Historia de Usuario 06 CA001","type":"feature","href":"7cdea769927ebdd89ca514bea1c1759db63069203fa11f5f71a08c15b2f4e96b.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027fa fa-times-circle failure-icon \u0027 title\u003d\u0027FAILURE\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e4 scenarios\u003c/span\u003e"]},{"text":"Historia de Usuario 06 CA003","type":"feature","href":"afd1c4dd06a23c0ee9b6cba1b0ef8ac352f43f2b08f363a79d489e6de321cbf4.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027fa fa-times-circle failure-icon \u0027 title\u003d\u0027FAILURE\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e4 scenarios\u003c/span\u003e"]},{"text":"Historia de Usuario 06 CA004","type":"feature","href":"fc1b2f649e18ceeacd359e10a5cda7458a69c02e704920fd66d1c5999ca067fa.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027fa fa-times-circle failure-icon \u0027 title\u003d\u0027FAILURE\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 scenario\u003c/span\u003e"]}],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e3 features\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -217,7 +217,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-12-2021 13:50</span>
     <br style="clear:left"/>
 </div>
 
@@ -280,7 +280,41 @@
                             <div id="results" class="tab-pane fade">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-4">
+
+                                            <div style="width:300px;" class="chart-container automated-and-manual-results">
+                                                <div class="ct-chart ct-square"></div>
+                                            </div>
+                                            <script>
+
+                                                var labels = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '100%', ' ', ' ', ' ', ' ', ' '];
+                                                // Our series array that contains series objects or in this case series data arrays
+
+                                                var series = [{meta: 'Passing tests (automated)', value: 0}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 9}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                // as you saw in the previous example
+                                                var options = {
+                                                    width: 350,
+                                                    height: 300
+                                                };
+
+                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                    new Chartist.Pie('.ct-chart', {
+                                                        series: series,
+                                                        labels: labels,
+                                                    }, {
+                                                        donut: true,
+                                                        donutWidth: 60,
+                                                        donutSolid: true,
+                                                        startAngle: 270,
+                                                        showLabel: true
+                                                    }, options);
+                                                });
+
+                                            </script>
+                                        </div>
+                                        <div class="col-sm-8">
 
                                         <table class="table">
                                             <thead>
@@ -321,19 +355,19 @@
                                                 <td class="automated-stats"> </td>
                                             </tr>
                                             <tr>
-                                                                            <td colspan="3"><i
-                                                                                class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                             <td colspan="3"><a href="c33448b416d8b7e37e1197540de0bda4ba550a49cf20ef29df239ec8b6e72b51.html"><i
+                                                                                    class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
                                                                             </td>
 
                                             </tr>
 
                                             <tr>
-                                                                <td class="aggregate-result-count indented-error-category">
-                                                                    <i
-                                                                            class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
-                                                                </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
+                                                                    <td class="aggregate-result-count indented-error-category">
+                                                                        <a href="74a3b66251b0191890f926213b59d7949ed8c250ce36b89a2c981e4ac53f0fb2.html"><i
+                                                                                class='fa fa-times-circle failure-icon'></i>&nbsp;Failed</a>
+                                                                    </td>
+                                                <td class="automated-stats">9</td>
+                                                <td class="automated-stats">100%</td>
                                             <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
                                                                     <i
@@ -351,7 +385,7 @@
                                             </tr>
                                             <tr class="summary-stats">
                                                 <td class="aggregate-result-count">Total</td>
-                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats">9</td>
                                                 <td class="automated-stats"></td>
                                             </tr>
                                             </tbody>
@@ -373,11 +407,11 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
+                                                        <td> 2m 48s</td>
+                                                        <td> 2m 38s</td>
+                                                        <td>17s</td>
+                                                        <td>21s</td>
+                                                        <td>18s</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -416,11 +450,11 @@
             <td> 
                 
             </td>
-            <td>0</td>
+            <td>4</td>
             <td>0</td>
             <td>
-                <span class="status_icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a></span>
-                <span style="display:none">2</span>
+                <span class="status_icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a></span>
+                <span style="display:none">3</span>
             </td>
 
             <td width="165px">
@@ -437,10 +471,10 @@
                      style="width: 0%; background-color:#30cb23;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -450,10 +484,10 @@
                      style="width: 0%; background-color:#A2C4EC;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -463,10 +497,10 @@
                      style="width: 0%; background-color:darkgrey;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -476,23 +510,23 @@
                      style="width: 0%; background-color:#EEE098;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
-                     style="width: 0%; background-color:#f8001f;"
-                     aria-valuenow="0"
+                     style="width: 100%; background-color:#f8001f;"
+                     aria-valuenow="4"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -502,10 +536,10 @@
                      style="width: 0%; background-color:darkorange;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -515,10 +549,10 @@
                      style="width: 0%; background-color:fuchsia;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -542,11 +576,11 @@
             <td> 
                 
             </td>
-            <td>0</td>
+            <td>4</td>
             <td>0</td>
             <td>
-                <span class="status_icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a></span>
-                <span style="display:none">2</span>
+                <span class="status_icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a></span>
+                <span style="display:none">3</span>
             </td>
 
             <td width="165px">
@@ -563,10 +597,10 @@
                      style="width: 0%; background-color:#30cb23;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -576,10 +610,10 @@
                      style="width: 0%; background-color:#A2C4EC;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -589,10 +623,10 @@
                      style="width: 0%; background-color:darkgrey;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -602,23 +636,23 @@
                      style="width: 0%; background-color:#EEE098;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
-                     style="width: 0%; background-color:#f8001f;"
-                     aria-valuenow="0"
+                     style="width: 100%; background-color:#f8001f;"
+                     aria-valuenow="4"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -628,10 +662,10 @@
                      style="width: 0%; background-color:darkorange;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -641,10 +675,10 @@
                      style="width: 0%; background-color:fuchsia;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="4"
+                     title="  - Total tests: 4
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 4 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -668,11 +702,11 @@
             <td> 
                 
             </td>
-            <td>0</td>
+            <td>1</td>
             <td>0</td>
             <td>
-                <span class="status_icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a></span>
-                <span style="display:none">2</span>
+                <span class="status_icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a></span>
+                <span style="display:none">3</span>
             </td>
 
             <td width="165px">
@@ -689,10 +723,10 @@
                      style="width: 0%; background-color:#30cb23;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="1"
+                     title="  - Total tests: 1
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 1 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -702,10 +736,10 @@
                      style="width: 0%; background-color:#A2C4EC;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="1"
+                     title="  - Total tests: 1
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 1 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -715,10 +749,10 @@
                      style="width: 0%; background-color:darkgrey;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="1"
+                     title="  - Total tests: 1
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 1 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -728,23 +762,23 @@
                      style="width: 0%; background-color:#EEE098;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="1"
+                     title="  - Total tests: 1
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 1 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
-                     style="width: 0%; background-color:#f8001f;"
-                     aria-valuenow="0"
+                     style="width: 100%; background-color:#f8001f;"
+                     aria-valuenow="1"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="1"
+                     title="  - Total tests: 1
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 1 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -754,10 +788,10 @@
                      style="width: 0%; background-color:darkorange;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="1"
+                     title="  - Total tests: 1
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 1 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -767,10 +801,10 @@
                      style="width: 0%; background-color:fuchsia;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
+                     aria-valuemax="1"
+                     title="  - Total tests: 1
   - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+  - Failing tests: 1 (100%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -795,7 +829,155 @@
                                             <div class="col-sm-12">
                                                 <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
 
-                                            No automated tests were executed
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th>feature</th>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="7cdea769927ebdd89ca514bea1c1759db63069203fa11f5f71a08c15b2f4e96b.html">Historia de Usuario 06 CA001</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="afec568c9050096b7f153a3f431b1494f4be3cc58b86210cf8e082354274225e.html">Verificar la creación del programa suministrando los datos obligatorios</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:50:41</td>
+                                                    <td>17s 965ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="7cdea769927ebdd89ca514bea1c1759db63069203fa11f5f71a08c15b2f4e96b.html">Historia de Usuario 06 CA001</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="4538bd6ed8623d70160fd8485014bd33749627b85c8005fe79a701f3b65d2998.html">Verificar el fallo al momento de no suministrar ninguna información en los campos obligatorios</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:50:59</td>
+                                                    <td>18s 248ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="7cdea769927ebdd89ca514bea1c1759db63069203fa11f5f71a08c15b2f4e96b.html">Historia de Usuario 06 CA001</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="941d4ea775a15c5e3b7bca22d271ba9b358c2e2a974e44825f212785baf87018.html">Verificar el fallo al momento de no ingresar nombre del programa</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:51:19</td>
+                                                    <td>18s 445ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="7cdea769927ebdd89ca514bea1c1759db63069203fa11f5f71a08c15b2f4e96b.html">Historia de Usuario 06 CA001</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="d3ff7f6f892aa2db2a7f8a6809a4b965f260ec1338545e0087e11849f9d1d318.html">Verificar el fallo al momento de no ingresar ningún curso al programa</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:51:38</td>
+                                                    <td>18s 358ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="afd1c4dd06a23c0ee9b6cba1b0ef8ac352f43f2b08f363a79d489e6de321cbf4.html">Historia de Usuario 06 CA003</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="3591c3980b0aa54b6243c4edeabbae35559fd18efa74a350a59bede2e92ce4cd.html">Verificacion de correcta eliminacion de un programa</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:51:57</td>
+                                                    <td>21s 634ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="afd1c4dd06a23c0ee9b6cba1b0ef8ac352f43f2b08f363a79d489e6de321cbf4.html">Historia de Usuario 06 CA003</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="65e9c0e798c2427d6d912c7ef0851d46aef8f709ba130889a98d33cf63e718c1.html">Verificacion de correcta edicion de nombre de programa</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:52:20</td>
+                                                    <td>18s 440ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="afd1c4dd06a23c0ee9b6cba1b0ef8ac352f43f2b08f363a79d489e6de321cbf4.html">Historia de Usuario 06 CA003</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="03a396f96517ec3e9fa305c29ef355559e51ed32dcab898a85a97ec55513ca96.html">Verificacion de Error con falta de nombre de programa</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:52:40</td>
+                                                    <td>18s 461ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="afd1c4dd06a23c0ee9b6cba1b0ef8ac352f43f2b08f363a79d489e6de321cbf4.html">Historia de Usuario 06 CA003</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="c12b1b29e61df1d9110f0c5fc225e66f52c8d7ff23f92c7d0cc9cf092871174c.html">Correcta asignacion de cursos</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:52:59</td>
+                                                    <td>18s 852ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="fc1b2f649e18ceeacd359e10a5cda7458a69c02e704920fd66d1c5999ca067fa.html">Historia de Usuario 06 CA004</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="3681fde33c83522b0cdb07fdd9510d79450453efcfec057fe748a2b7e2b9f5ad.html">verificar la existencia y el funcionamiento de la opción de listar un programa</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:53:19</td>
+                                                    <td>18s 220ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
 
                                             </div>
                                         </div>

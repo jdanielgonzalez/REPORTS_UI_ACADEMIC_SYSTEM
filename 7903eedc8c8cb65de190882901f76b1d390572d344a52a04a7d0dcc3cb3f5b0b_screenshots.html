@@ -157,7 +157,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 02-12-2021 23:29</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-12-2021 13:53</span>
     <br style="clear:left"/>
 </div>
 
@@ -194,9 +194,9 @@ Para: poder asignar aprendices y coaches.
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Crear un training en sofkau
+                                <span class="failing-color">Crear un training en sofkau
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -213,61 +213,73 @@ Para: poder asignar aprendices y coaches.
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Assertion error: Expected: an element that is visible but: no matching element found by xpath: //*[@id='sideBar_menu flex_column_center']/ul/a[2]</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall""
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="far fa-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>java.lang.AssertionError </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>co.com.sofka.tasks.hu07.createTraining.CreateTrainingTask.performAs(CreateTrainingTask.java:53)<br />co.com.sofka.stepdefinition.hu07.createtrainingstepdefinition.CreateTrainingStepDefinition.elCoahQuiereCrearUnNuevoTraining(CreateTrainingStepDefinition.java:40)<br />io.cucumber.java.Invoker.invoke(Invoker.java:27)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:27)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:64)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:49)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:46)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:51)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:67)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:83)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:24)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:227)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:54)<br /></pre>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+                <div class="panel-body">
+                    <a href="pagesource369515767801712174.html.txt" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="57b4a92d47c7baacb0cf0117be841390bb222d4a20ef4bb070d3425a99aa346f.png" title=" Given que el coach se encuentra logueado" width="1920"/>
-                <img src="57b4a92d47c7baacb0cf0117be841390bb222d4a20ef4bb070d3425a99aa346f.png" title=" Coach open landing page" width="1920"/>
-                <img src="57b4a92d47c7baacb0cf0117be841390bb222d4a20ef4bb070d3425a99aa346f.png" title=" Coach opens the Landing page" width="1920"/>
-                <img src="153fd2d4a0c8e96ffa4abbf4a7122fa43c8814825508adbacebe2a63a528ef6f.png" title=" Coach opens the Landing page (completed)" width="1920"/>
-                <img src="153fd2d4a0c8e96ffa4abbf4a7122fa43c8814825508adbacebe2a63a528ef6f.png" title=" Coach open landing page (completed)" width="1920"/>
-                <img src="153fd2d4a0c8e96ffa4abbf4a7122fa43c8814825508adbacebe2a63a528ef6f.png" title=" Coach login with google" width="1920"/>
-                <img src="153fd2d4a0c8e96ffa4abbf4a7122fa43c8814825508adbacebe2a63a528ef6f.png" title=" Coach clicks on loginButton" width="1920"/>
-                <img src="2d8f37f464e2f2a92c2d215bff8b274230a6276a3e895ccf2f964a9479007b71.png" title=" Coach clicks on loginButton (completed)" width="1920"/>
-                <img src="2d8f37f464e2f2a92c2d215bff8b274230a6276a3e895ccf2f964a9479007b71.png" title=" Coach login with google (completed)" width="1920"/>
-                <img src="2d8f37f464e2f2a92c2d215bff8b274230a6276a3e895ccf2f964a9479007b71.png" title=" Coach fill google login form task" width="1920"/>
-                <img src="0aaeeab3b483c13bf024bdfa618163f967dd187af56d70e42fd11b2a347bfcc3.png" title=" Coach clicks on emailGoogle" width="762"/>
-                <img src="0aaeeab3b483c13bf024bdfa618163f967dd187af56d70e42fd11b2a347bfcc3.png" title=" Coach clicks on emailGoogle (completed)" width="762"/>
-                <img src="0aaeeab3b483c13bf024bdfa618163f967dd187af56d70e42fd11b2a347bfcc3.png" title=" Coach enters 'jdaniel.g.puerta@gmail.com' into emailGoogle" width="762"/>
-                <img src="c0c2382df0cf167aaf3c0dc1660f62de6900d7537b032bbe7662049cee840ce4.png" title=" Coach enters 'jdaniel.g.puerta@gmail.com' into emailGoogle (completed)" width="762"/>
-                <img src="c0c2382df0cf167aaf3c0dc1660f62de6900d7537b032bbe7662049cee840ce4.png" title=" Coach clicks on nextButton" width="762"/>
-                <img src="f600a66a80a85434cbecdf8e315bd94cb9da5b5805a4927c69e32cff98e22068.png" title=" Coach clicks on nextButton (completed)" width="762"/>
-                <img src="8cd1dc5fa83513784ea6a6837e0c2e5cbff91492b8081027b3a1d35c3cd8a2d5.png" title=" Coach clicks on password" width="762"/>
-                <img src="03ecaaaa884705f938bbd8471987039bdd2e580c689eef179fa36e9e3de44c56.png" title=" Coach clicks on password (completed)" width="762"/>
-                <img src="03ecaaaa884705f938bbd8471987039bdd2e580c689eef179fa36e9e3de44c56.png" title=" Coach enters 'AdminQA*' into password" width="762"/>
-                <img src="341bde46b90d2d13ac7dd00ecaba653a062131880a9a4066af8d36b6e323d90a.png" title=" Coach enters 'AdminQA*' into password (completed)" width="762"/>
-                <img src="341bde46b90d2d13ac7dd00ecaba653a062131880a9a4066af8d36b6e323d90a.png" title=" Coach clicks on nextPasswordButton" width="762"/>
-                <img src="7f1c04202b3aa944ba652962fedda10969f527f2f526377ce02948393c8c99f3.png" title=" Coach clicks on nextPasswordButton (completed)" width="762"/>
-                <img src="7f1c04202b3aa944ba652962fedda10969f527f2f526377ce02948393c8c99f3.png" title=" Coach fill google login form task (completed)" width="762"/>
-                <img src="7f1c04202b3aa944ba652962fedda10969f527f2f526377ce02948393c8c99f3.png" title=" Given que el coach se encuentra logueado (completed)" width="762"/>
-                <img src="2d8f37f464e2f2a92c2d215bff8b274230a6276a3e895ccf2f964a9479007b71.png" title=" When el coah quiere crear un nuevo training" width="1920"/>
-                <img src="2d8f37f464e2f2a92c2d215bff8b274230a6276a3e895ccf2f964a9479007b71.png" title=" Coach create training task" width="1920"/>
-                <img src="4d6aaf9d37ee03ffeaeef4696d5c0e919a19f3ab5463241eacb81158ef1ea0de.png" title=" Coach clicks on training_active" width="1920"/>
-                <img src="c3b37f98b2840571c7ec10acc9835546a8740fa1aefdd7e58bb295b9fd315057.png" title=" Coach clicks on training_active (completed)" width="1920"/>
-                <img src="1a9f4617bd2ab0a2f9553c1f57e63fa908b1c5b51cb4c6163b045d57ffa12192.png" title=" Coach clicks on create_training" width="1920"/>
-                <img src="c6186de60c0a36bab7b35150ae989fbeb61abf3d5f69e7bb7617b99d5895d6da.png" title=" Coach clicks on create_training (completed)" width="1920"/>
-                <img src="bfa6c3044560bbd6079a66a94132911a1e03762cff9c0469b159172df727b1f6.png" title=" Coach clears field Nombre del training" width="1920"/>
-                <img src="935ab81670e41d8fd1433795125743c48e0eb060ce12ad1b0145ad7ebcc4e21f.png" title=" Coach clears field Nombre del training (completed)" width="1920"/>
-                <img src="935ab81670e41d8fd1433795125743c48e0eb060ce12ad1b0145ad7ebcc4e21f.png" title=" Coach enters 'DESARROLLO' into Nombre del training" width="1920"/>
-                <img src="63a01b78dc0f2071f1b974600061165094d86cb56ec3b86850c58ef7f45fedee.png" title=" Coach enters 'DESARROLLO' into Nombre del training (completed)" width="1920"/>
-                <img src="63a01b78dc0f2071f1b974600061165094d86cb56ec3b86850c58ef7f45fedee.png" title=" Coach selects 1 in Select Coaches" width="1920"/>
-                <img src="4b90614fb3498dce56dcff1766195c154691d246c699cb175ad40fa5613b15ce.png" title=" Coach selects 1 in Select Coaches (completed)" width="1920"/>
-                <img src="2d480e387ae7d7280f2532635c81eff2c3c5413b5d54f14a028d39e1e2e55a32.png" title=" Coach clears field Fecha de Inicio" width="1920"/>
-                <img src="d3c5a12ec1fa52d3fc89ef9865e0791b9b37fffe21dcacf1970c515866bb0cb2.png" title=" Coach clears field Fecha de Inicio (completed)" width="1920"/>
-                <img src="d3c5a12ec1fa52d3fc89ef9865e0791b9b37fffe21dcacf1970c515866bb0cb2.png" title=" Coach enters '12/03/2022' into Fecha de Inicio" width="1920"/>
-                <img src="d3c5a12ec1fa52d3fc89ef9865e0791b9b37fffe21dcacf1970c515866bb0cb2.png" title=" Coach enters '12/03/2022' into Fecha de Inicio (completed)" width="1920"/>
-                <img src="27107231c7b4bfc91baac48e2396f2ad9b112f3c3c0e9e20f007cd42cf83f124.png" title=" Coach clicks on Elegir un Programa" width="1920"/>
-                <img src="38440dcbd0b545be9661039c76955644e21636ea37c4d048c4665adb3b50d640.png" title=" Coach clicks on Elegir un Programa (completed)" width="1920"/>
-                <img src="913ad5d5bbd5779b95e21f4476600e9b1cfee5b0df9340d8d3cd2bc0995ca558.png" title=" Coach enters '' into create_training" width="1920"/>
-                <img src="de87a1ebad47cfab7cd50b92a90e6e645a2f8e1a8dd9ccf4d1b34242f78f3149.png" title=" Coach enters '' into create_training (completed)" width="1920"/>
-                <img src="de87a1ebad47cfab7cd50b92a90e6e645a2f8e1a8dd9ccf4d1b34242f78f3149.png" title=" Coach clicks on Crear" width="1920"/>
-                <img src="36055fbea18eb60d8bf310c53999fba193cb0a42f1f253b7dfb118064c08b97b.png" title=" Coach clicks on Crear (completed)" width="1920"/>
-                <img src="d782c52832a5a98936d88871d0c5f3ba4c9bd471bf5ac1d1ddfac27b637912f9.png" title=" Coach clicks on training_active" width="1920"/>
-                <img src="a0de0c49a0202fa88c098e948f9df03b305a241fd9a5084e56069384d4d0dd0d.png" title=" Coach clicks on training_active (completed)" width="1920"/>
-                <img src="0227229c58df97b601f9923a47f612f3db779f88947961fa99952e49cae54e88.png" title=" Coach create training task (completed)" width="1920"/>
-                <img src="0227229c58df97b601f9923a47f612f3db779f88947961fa99952e49cae54e88.png" title=" When el coah quiere crear un nuevo training (completed)" width="1920"/>
-                <img src="0227229c58df97b601f9923a47f612f3db779f88947961fa99952e49cae54e88.png" title=" Then el sistema deberia crear el training de manera correcta" width="1920"/>
-                <img src="0227229c58df97b601f9923a47f612f3db779f88947961fa99952e49cae54e88.png" title=" Then create training step definition$$ lambda$642/0x00000001005b7440 should be '6'" width="1920"/>
-                <img src="0227229c58df97b601f9923a47f612f3db779f88947961fa99952e49cae54e88.png" title=" Then el sistema deberia crear el training de manera correcta (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+                <img src="2a7791ba15962f8c5aaf5c7dda8ec8e08a9c8b927ab7a70adb90a7d966fe0fb6.png" title=" Given que el coach se encuentra logueado" width="1366"/>
+                <img src="2a7791ba15962f8c5aaf5c7dda8ec8e08a9c8b927ab7a70adb90a7d966fe0fb6.png" title=" Coach open landing page" width="1366"/>
+                <img src="2a7791ba15962f8c5aaf5c7dda8ec8e08a9c8b927ab7a70adb90a7d966fe0fb6.png" title=" Coach opens the Landing page" width="1366"/>
+                <img src="4e99270f22d204fad9324fb67798d6829ee2b611431f689ee95e2169530e637e.png" title=" Coach opens the Landing page (completed)" width="1366"/>
+                <img src="4e99270f22d204fad9324fb67798d6829ee2b611431f689ee95e2169530e637e.png" title=" Coach open landing page (completed)" width="1366"/>
+                <img src="4e99270f22d204fad9324fb67798d6829ee2b611431f689ee95e2169530e637e.png" title=" Coach login with google" width="1366"/>
+                <img src="4e99270f22d204fad9324fb67798d6829ee2b611431f689ee95e2169530e637e.png" title=" Coach clicks on loginButton" width="1366"/>
+                <img src="1f2cd70b8b445064f99ee7dfdea73beb43c30110f905a0c53c14f4ced524ca92.png" title=" Coach clicks on loginButton (completed)" width="1366"/>
+                <img src="1f2cd70b8b445064f99ee7dfdea73beb43c30110f905a0c53c14f4ced524ca92.png" title=" Coach login with google (completed)" width="1366"/>
+                <img src="2c925f10e92b9b33804a3df8896f0951c6f51f664803ca7b25b3e96597bcf260.png" title=" Coach fill google login form task" width="500"/>
+                <img src="7388a612b40a1cf4f8733d1097ea87c694d98cc7267fcd298efdd318ed64dde3.png" title=" Coach clicks on emailGoogle" width="500"/>
+                <img src="3b7a2a0c216ae02804a251880aa61795f20cfeeea27fd867a7c58ad7b6f6dec4.png" title=" Coach clicks on emailGoogle (completed)" width="500"/>
+                <img src="3b7a2a0c216ae02804a251880aa61795f20cfeeea27fd867a7c58ad7b6f6dec4.png" title=" Coach enters 'jdaniel.g.puerta@gmail.com' into emailGoogle" width="500"/>
+                <img src="95d00c4f41f8e1acd024169aec7efb5059bafa7bf8c10690c6c6cb821781267c.png" title=" Coach enters 'jdaniel.g.puerta@gmail.com' into emailGoogle (completed)" width="500"/>
+                <img src="95d00c4f41f8e1acd024169aec7efb5059bafa7bf8c10690c6c6cb821781267c.png" title=" Coach clicks on nextButton" width="500"/>
+                <img src="f37b07ea5e9c4d1e37cfefc5429d7c1e6b077eb8d15e5f9332a1fe89e2d4dd58.png" title=" Coach clicks on nextButton (completed)" width="500"/>
+                <img src="df834c66632ccb44af0f045acc5e6c1a69cd4e5f06738af2434ff6039e669b13.png" title=" Coach clicks on password" width="500"/>
+                <img src="526757f52f406bf99ff2a195df05962486c6a8dc3928fa1c448b6d692c178175.png" title=" Coach clicks on password (completed)" width="500"/>
+                <img src="526757f52f406bf99ff2a195df05962486c6a8dc3928fa1c448b6d692c178175.png" title=" Coach enters 'AdminQA*' into password" width="500"/>
+                <img src="a64e1a0374bc97b94adaebece361514fe4eb5bc6cd3f167503879703c521c1a4.png" title=" Coach enters 'AdminQA*' into password (completed)" width="500"/>
+                <img src="a64e1a0374bc97b94adaebece361514fe4eb5bc6cd3f167503879703c521c1a4.png" title=" Coach clicks on nextPasswordButton" width="500"/>
+                <img src="7eae67ee795c63ce1915eba8de954b8d1d69c5c76848601335cb3748c97ad2e7.png" title=" Coach clicks on nextPasswordButton (completed)" width="500"/>
+                <img src="7eae67ee795c63ce1915eba8de954b8d1d69c5c76848601335cb3748c97ad2e7.png" title=" Coach fill google login form task (completed)" width="500"/>
+                <img src="7eae67ee795c63ce1915eba8de954b8d1d69c5c76848601335cb3748c97ad2e7.png" title=" Given que el coach se encuentra logueado (completed)" width="500"/>
+                <img src="7eae67ee795c63ce1915eba8de954b8d1d69c5c76848601335cb3748c97ad2e7.png" title=" When el coah quiere crear un nuevo training" width="500"/>
+                <img src="4e99270f22d204fad9324fb67798d6829ee2b611431f689ee95e2169530e637e.png" title=" Coach create training task: <span class='failing-color'>FAILURE</span>" width="1366"/>
             </div>
         </div>
 

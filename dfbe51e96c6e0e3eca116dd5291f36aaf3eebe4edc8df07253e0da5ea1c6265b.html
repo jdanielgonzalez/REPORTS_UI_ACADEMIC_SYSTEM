@@ -148,7 +148,7 @@
             $("#requirements-tabs").tabs();
             $("#test-tabs").tabs();
 
-            var requirementsTree = [{"text":"Hu01","type":"feature","href":"dfbe51e96c6e0e3eca116dd5291f36aaf3eebe4edc8df07253e0da5ea1c6265b.html","nodes":[{"text":"HU01 - autenticacion","type":"feature","href":"dc9df72d1b2f5a887fedfb9c5fae3b420d1e3097239be5a06a9648c38b5e5cd2.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027far fa-stop-circle pending-icon \u0027 title\u003d\u0027PENDING\u0027\u003e\u003c/i\u003e\u003c/a\u003e",""]}],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 feature\u003c/span\u003e"]}];
+            var requirementsTree = [{"text":"Hu01","type":"feature","href":"dfbe51e96c6e0e3eca116dd5291f36aaf3eebe4edc8df07253e0da5ea1c6265b.html","nodes":[{"text":"HU01 - autenticacion","type":"feature","href":"dc9df72d1b2f5a887fedfb9c5fae3b420d1e3097239be5a06a9648c38b5e5cd2.html","nodes":[],"selectable":false,"tags":["\u003ca href\u003d\u0027##beforetable\u0027\u003e\u003ci class\u003d\u0027fa fa-times-circle failure-icon \u0027 title\u003d\u0027FAILURE\u0027\u003e\u003c/i\u003e\u003c/a\u003e","\u003cspan class\u003d\u0027feature-count\u0027\u003e6 scenarios\u003c/span\u003e"]}],"selectable":false,"tags":["","\u003cspan class\u003d\u0027feature-count\u0027\u003e1 feature\u003c/span\u003e"]}];
 
             $('#tree').treeview({
                 data: requirementsTree,
@@ -217,7 +217,7 @@
             <a href="#"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated </span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 03-12-2021 13:43</span>
     <br style="clear:left"/>
 </div>
 
@@ -280,7 +280,41 @@
                             <div id="results" class="tab-pane fade">
                                 <div class="container-fluid">
                                     <div class="row">
-                                        <div class="col-sm-12">
+                                        <div class="col-sm-4">
+
+                                            <div style="width:300px;" class="chart-container automated-and-manual-results">
+                                                <div class="ct-chart ct-square"></div>
+                                            </div>
+                                            <script>
+
+                                                var labels = ['67%', ' ', ' ', ' ', ' ', ' ', ' ', ' ', '33%', ' ', ' ', ' ', ' ', ' '];
+                                                // Our series array that contains series objects or in this case series data arrays
+
+                                                var series = [{meta: 'Passing tests (automated)', value: 4}, {meta: 'Passing tests (manual)', value: 0}, {meta: 'Pending tests (automated)', value: 0}, {meta: 'Pending tests (manual)', value: 0}, {meta: 'Ignored tests (automated)', value: 0}, {meta: 'Ignored tests (manual)', value: 0}, {meta: 'Skipped tests (automated)', value: 0}, {meta: 'Skipped tests (manual)', value: 0}, {meta: 'Failing tests (automated)', value: 2}, {meta: 'Failing tests (manual)', value: 0}, {meta: 'Broken tests (automated)', value: 0}, {meta: 'Broken tests (manual)', value: 0}, {meta: 'Compromised tests (automated)', value: 0}, {meta: 'Compromised tests (manual)', value: 0}];
+
+                                                // As options we currently only set a static size of 300x200 px. We can also omit this and use aspect ratio containers
+                                                // as you saw in the previous example
+                                                var options = {
+                                                    width: 350,
+                                                    height: 300
+                                                };
+
+                                                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                                                    new Chartist.Pie('.ct-chart', {
+                                                        series: series,
+                                                        labels: labels,
+                                                    }, {
+                                                        donut: true,
+                                                        donutWidth: 60,
+                                                        donutSolid: true,
+                                                        startAngle: 270,
+                                                        showLabel: true
+                                                    }, options);
+                                                });
+
+                                            </script>
+                                        </div>
+                                        <div class="col-sm-8">
 
                                         <table class="table">
                                             <thead>
@@ -293,11 +327,12 @@
                                             </thead>
                                             <tbody>
                                             <tr>
-                                                                    <td class="aggregate-result-count"><i
-                                                                            class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing
+                                                                    <td class="aggregate-result-count">
+                                                                        <a href="00b35665d9c8d4816f8213353004647cc48f362f8c4c26b0713847bba1180324.html"><i
+                                                                                class='fa fa-check-circle-o success-icon'></i>&nbsp;Passing</a>
                                                                     </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
+                                                <td class="automated-stats">4</td>
+                                                <td class="automated-stats">67%</td>
                                             </tr>
                                             <tr>
                                                                     <td class="aggregate-result-count"><i
@@ -321,19 +356,19 @@
                                                 <td class="automated-stats"> </td>
                                             </tr>
                                             <tr>
-                                                                            <td colspan="3"><i
-                                                                                class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
+                                                                             <td colspan="3"><a href="5a7fd8591b3501c2cc373e6b9f6d19299cc51d27026f2ce28fbd3a80a8fa9c7a.html"><i
+                                                                                    class='fa fa-times failure-icon'></i>&nbsp;<em>Unsuccessful</em></a>
                                                                             </td>
 
                                             </tr>
 
                                             <tr>
-                                                                <td class="aggregate-result-count indented-error-category">
-                                                                    <i
-                                                                            class='fa fa-times-circle failure-icon'></i>&nbsp;Failed
-                                                                </td>
-                                                <td class="automated-stats">0</td>
-                                                <td class="automated-stats"> </td>
+                                                                    <td class="aggregate-result-count indented-error-category">
+                                                                        <a href="62efd2ddc2bf349a50245cdf608ae949bacd22e412f194eb6d2592ec274a06c6.html"><i
+                                                                                class='fa fa-times-circle failure-icon'></i>&nbsp;Failed</a>
+                                                                    </td>
+                                                <td class="automated-stats">2</td>
+                                                <td class="automated-stats">33%</td>
                                             <tr>
                                                                 <td class="aggregate-result-count indented-error-category">
                                                                     <i
@@ -351,7 +386,7 @@
                                             </tr>
                                             <tr class="summary-stats">
                                                 <td class="aggregate-result-count">Total</td>
-                                                <td class="automated-stats">0</td>
+                                                <td class="automated-stats">6</td>
                                                 <td class="automated-stats"></td>
                                             </tr>
                                             </tbody>
@@ -373,11 +408,11 @@
                                                     </thead>
                                                     <tbody>
                                                     <tr>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
-                                                        <td>0ms</td>
+                                                        <td> 1m 52s</td>
+                                                        <td> 1m 31s</td>
+                                                        <td>5s</td>
+                                                        <td>32s</td>
+                                                        <td>18s</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -416,11 +451,11 @@
             <td> 
                 
             </td>
-            <td>0</td>
+            <td>6</td>
             <td>0</td>
             <td>
-                <span class="status_icon"><a href='##beforetable'><i class='far fa-stop-circle pending-icon ' title='PENDING'></i></a></span>
-                <span style="display:none">2</span>
+                <span class="status_icon"><a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a></span>
+                <span style="display:none">3</span>
             </td>
 
             <td width="165px">
@@ -429,18 +464,18 @@
 <table>
     <tr>
         <td width="40px" style="padding-top:4px;">
-            <div class="small" style="text-align:right;">0%</div>
+            <div class="small" style="text-align:right;">66.7%</div>
         </td>
         <td style="min-width:12.5em;">
             <div class="progress">
                 <div class="progress-bar" role="progressbar"
-                     style="width: 0%; background-color:#30cb23;"
-                     aria-valuenow="0"
+                     style="width: 66.666667%; background-color:#30cb23;"
+                     aria-valuenow="4"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
-  - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="6"
+                     title="  - Total tests: 6
+  - Passing tests: 4 (66.7%)
+  - Failing tests: 2 (33.3%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -450,10 +485,10 @@
                      style="width: 0%; background-color:#A2C4EC;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
-  - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="6"
+                     title="  - Total tests: 6
+  - Passing tests: 4 (66.7%)
+  - Failing tests: 2 (33.3%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -463,10 +498,10 @@
                      style="width: 0%; background-color:darkgrey;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
-  - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="6"
+                     title="  - Total tests: 6
+  - Passing tests: 4 (66.7%)
+  - Failing tests: 2 (33.3%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -476,23 +511,23 @@
                      style="width: 0%; background-color:#EEE098;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
-  - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="6"
+                     title="  - Total tests: 6
+  - Passing tests: 4 (66.7%)
+  - Failing tests: 2 (33.3%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
   - Ignored or skipped tests: 0 (0%)">
                 </div>
                 <div class="progress-bar" role="progressbar"
-                     style="width: 0%; background-color:#f8001f;"
-                     aria-valuenow="0"
+                     style="width: 33.333333%; background-color:#f8001f;"
+                     aria-valuenow="2"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
-  - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="6"
+                     title="  - Total tests: 6
+  - Passing tests: 4 (66.7%)
+  - Failing tests: 2 (33.3%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -502,10 +537,10 @@
                      style="width: 0%; background-color:darkorange;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
-  - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="6"
+                     title="  - Total tests: 6
+  - Passing tests: 4 (66.7%)
+  - Failing tests: 2 (33.3%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -515,10 +550,10 @@
                      style="width: 0%; background-color:fuchsia;"
                      aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="0"
-                     title="  - Total tests: 0
-  - Passing tests: 0 (0%)
-  - Failing tests: 0 (0%)
+                     aria-valuemax="6"
+                     title="  - Total tests: 6
+  - Passing tests: 4 (66.7%)
+  - Failing tests: 2 (33.3%)
   - Tests with errors: 0 (0%)
   - Compromised tests 0 (0%)
   - Pending tests: 0 (0%)
@@ -543,7 +578,110 @@
                                             <div class="col-sm-12">
                                                 <h3><i class="fas fa-cogs"></i> Automated Tests</h3>
 
-                                            No automated tests were executed
+                                            <table class="scenario-result-table table" id="scenario-results">
+                                                <thead>
+                                                <tr>
+                                                    <th>feature</th>
+                                                    <th class="test-name-column">Scenario</th>
+                                                    <th>Steps</th>
+                                                    <th>Start Time</th>
+                                                    <th>Duration</th>
+                                                    <th>Result</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="dc9df72d1b2f5a887fedfb9c5fae3b420d1e3097239be5a06a9648c38b5e5cd2.html">HU01 - autenticacion</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="aa8f7eb1154d83d94612896c2e0fc262a8f4626afea753cc9b332ba4b002b520.html">uno - Existencia de elemento de login en la loginPage</a>
+                                                    </td>
+                                                    <td>2</td>
+                                                    <td>13:43:52</td>
+                                                    <td>9s 991ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="dc9df72d1b2f5a887fedfb9c5fae3b420d1e3097239be5a06a9648c38b5e5cd2.html">HU01 - autenticacion</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="7bf429a14e8c6a08def3050f9f7d99e62701ebe57495fc31d545db1d47916d6c.html">dos - Login exitoso coach</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:44:04</td>
+                                                    <td>19s 457ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="dc9df72d1b2f5a887fedfb9c5fae3b420d1e3097239be5a06a9648c38b5e5cd2.html">HU01 - autenticacion</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="5b997c3599a62ac06c2283710fd6cd41b0ff7f6396df4f856970e989c8301064.html">tres - login exitoso aprendiz</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:44:25</td>
+                                                    <td>17s 394ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result SUCCESS">
+                                                    <td>
+                                                            <a href="dc9df72d1b2f5a887fedfb9c5fae3b420d1e3097239be5a06a9648c38b5e5cd2.html">HU01 - autenticacion</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="57223258f8479d0f7e0478711542eae09c186c287d3a544adcd615c935c4a518.html">cuatro - Acceso a rutas sin tener sesion activa</a>
+                                                    </td>
+                                                    <td>3</td>
+                                                    <td>13:44:43</td>
+                                                    <td>5s 739ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-check-circle-o success-icon ' title='SUCCESS'></i></a> <span
+                                                                style="display:none">SUCCESS</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="dc9df72d1b2f5a887fedfb9c5fae3b420d1e3097239be5a06a9648c38b5e5cd2.html">HU01 - autenticacion</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="dc98c6e9ad2973cc3c169d4de3b8504b9b644b0317d11cc941683c6e3e7de845.html">cinco - Login orientado al fallo</a>
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td>13:44:50</td>
+                                                    <td>32s 977ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="scenario-result FAILURE">
+                                                    <td>
+                                                            <a href="dc9df72d1b2f5a887fedfb9c5fae3b420d1e3097239be5a06a9648c38b5e5cd2.html">HU01 - autenticacion</a>
+                                                    </td>
+                                                    <td>
+                                                            <a href="1ffb5302467d40d52f36b5d9c1b358a674befb4bab1859e12834331672d1e854.html">seis - Cierre de sesion</a>
+                                                    </td>
+                                                    <td>4</td>
+                                                    <td>13:45:24</td>
+                                                    <td>26s 746ms</td>
+                                                    <td>
+                                                            <a href='##beforetable'><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></a> <span
+                                                                style="display:none">FAILURE</span>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
 
                                             </div>
                                         </div>

@@ -1,0 +1,4 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Listar los training activos","Visualizar los training activos con el rol de coach autenticado","FAILURE","2021-12-03T13:46:09.4368827-05:00[America/Bogota]","0.0","19.03"
+"Listar los training activos","Visualizar un training especifico dentro de la lista","FAILURE","2021-12-03T13:46:29.433443-05:00[America/Bogota]","0.0","19.56"
+"Listar los training activos","Visualizar los training activos con ruta alternativa en el rol de coach autenticado","FAILURE","2021-12-03T13:46:49.9158851-05:00[America/Bogota]","0.0","19.48"
